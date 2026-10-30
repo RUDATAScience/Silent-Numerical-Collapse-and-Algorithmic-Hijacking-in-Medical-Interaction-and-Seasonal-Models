@@ -1,0 +1,35 @@
+\begin{table*}[htbp]
+\centering
+\caption{Master Empirical Benchmark Across All 22 Public Medical and Epidemiological Datasets: Exact Rational ($\mathbb{Q}$) / Proposed Gram-Schmidt Orthogonalized Protocol vs.\ Raw and Post-Scaled Library Outputs}
+\label{tab:master_22_medical_cases}
+\scriptsize
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{rllllrrrrrrl}
+\toprule
+\textbf{\#} & \textbf{Medical Cohort} & \textbf{Model} & \textbf{Interaction $X_1 \times X_2$} & \textbf{$\tau_{M,2}$} & \textbf{Raw VIF} & \textbf{Prop VIF} & \textbf{Exact $\mathbb{Q}$ / Prop $\hat{\beta}_1$ ($p$)} & \textbf{Raw Fit $\tilde{\beta}_1$ ($p$)} & \textbf{Raw SHAP} & \textbf{Prop SHAP} & \textbf{Observed Failure Mode} \\
+\midrule
+1 & Diabetes (Efron) \cite{Efron2004} ($N=442$) & OLS & \texttt{BP} $\times$ \texttt{BMI} & $6.0$ & $1.1e+02$ & $\bm{1.19}$ & $\bm{+1.385}$ ($1.4e-09$) & $-1.49$ ($\bm{0.22}$) & $73.7\%$ & $\bm{12.7\%}$ & Sign Flip, False Neg, LASSO $\sqrt{2}$ \\
+2 & UK Lung Deaths \cite{Venables2002} ($N=72$) & OLS & \texttt{Winter\_Cos} $\times$ \texttt{Year} & $1142.8$ & $2.1e+06$ & $\bm{1.00}$ & $\bm{+808.756}$ ($1.1e-49$) & $+57148.56$ ($\bm{0.05}$) & $49.1\%$ & $\bm{8.9\%}$ & SE Inflated \\
+3 & Mayo Clinic PBC \cite{Cox1972} ($N=312$) & OLS & \texttt{Bilirubin} $\times$ \texttt{Protime} & $10.7$ & $1.1e+02$ & $\bm{1.00}$ & $\bm{-0.141}$ ($1.8e-75$) & $+0.11$ ($\bm{0.05}$) & $57.9\%$ & $\bm{16.6\%}$ & Sign Flip, False Neg, LASSO $\sqrt{2}$ \\
+4 & Low Birth Weight \cite{Venables2002} ($N=189$) & OLS & \texttt{Smoke} $\times$ \texttt{LWT} & $4.2$ & $2.0e+01$ & $\bm{1.00}$ & $\bm{-283.800}$ ($6.2e-03$) & $-305.87$ ($\bm{0.50}$) & $37.7\%$ & $\bm{19.4\%}$ & False Neg \\
+5 & Heart Failure \cite{Chicco2020} ($N=299$) & Logistic & \texttt{Creatinine} $\times$ \texttt{Sodium} & $31.0$ & $1.0e+03$ & $\bm{1.00}$ & $\bm{+9.218}$ ($1.7e-08$) & $-71.70$ ($\bm{0.00}$) & $8.9\%$ & $\bm{8.1\%}$ & Sign Flip \\
+6 & Framingham CHD \cite{Kannel1961} ($N=3658$) & Logistic & \texttt{TotChol} $\times$ \texttt{Age} & $5.8$ & $6.4e+01$ & $\bm{1.00}$ & $\bm{+1.039}$ ($8.9e-47$) & $+3.36$ ($\bm{0.00}$) & $43.4\%$ & $\bm{11.4\%}$ & LASSO $\sqrt{2}$ \\
+7 & Breast Cancer WDBC \cite{Street1993} ($N=569$) & Logistic & \texttt{Worst\_Area} $\times$ \texttt{Smoothness} & $6.9$ & $7.8e+01$ & $\bm{1.04}$ & $\bm{+1.392}$ ($1.9e-19$) & $+0.64$ ($\bm{0.36}$) & $78.2\%$ & $\bm{4.7\%}$ & False Neg, LASSO $\sqrt{2}$ \\
+8 & Chicago NMMAPS \cite{Samet2000} ($N=5114$) & OLS & \texttt{PM10} $\times$ \texttt{Temp\_Kelvin} & $26.5$ & $7.2e+02$ & $\bm{1.00}$ & $\bm{+0.818}$ ($2.0e-06$) & $-13.02$ ($\bm{0.00}$) & $18.4\%$ & $\bm{32.8\%}$ & Sign Flip \\
+9 & Veteran Lung CA \cite{Kalbfleisch2002} ($N=137$) & Cox & \texttt{Karnofsky} $\times$ \texttt{Age} & $5.5$ & $4.2e+01$ & $\bm{1.00}$ & $\bm{-0.277}$ ($1.3e-36$) & $-0.21$ ($\bm{0.00}$) & $14.5\%$ & $\bm{25.4\%}$ & SE Inflated \\
+10 & Pima Diabetes \cite{Smith1988} ($N=532$) & Logistic & \texttt{Glucose} $\times$ \texttt{BP} & $5.8$ & $4.6e+01$ & $\bm{1.00}$ & $\bm{+0.779}$ ($2.9e-07$) & $+0.13$ ($\bm{0.66}$) & $41.7\%$ & $\bm{2.9\%}$ & False Neg \\
+11 & Stanford Heart Tx \cite{Crowley1977} ($N=103$) & Cox & \texttt{Transplant} $\times$ \texttt{Accept\_Year} & $1065.4$ & $1.1e+06$ & $\bm{1.00}$ & $\bm{-39.723}$ ($0.0e+00$) & $+1030.94$ ($\bm{0.00}$) & $43.8\%$ & $\bm{28.5\%}$ & Sign Flip, LASSO $\sqrt{2}$ \\
+12 & German Breast GBSG \cite{Sauerbrei1999} ($N=686$) & Cox & \texttt{Tamoxifen} $\times$ \texttt{Age} & $5.2$ & $2.8e+01$ & $\bm{1.00}$ & $\bm{-2.976}$ ($1.8e-83$) & $+3.41$ ($\bm{0.00}$) & $37.0\%$ & $\bm{43.1\%}$ & Sign Flip \\
+13 & Colon Cancer 5-FU \cite{Moertel1990} ($N=619$) & Cox & \texttt{Lev\_5FU} $\times$ \texttt{Age} & $5.0$ & $2.8e+01$ & $\bm{1.00}$ & $\bm{-4.258}$ ($2.5e-123$) & $+1.86$ ($\bm{0.00}$) & $41.2\%$ & $\bm{35.5\%}$ & Sign Flip \\
+14 & Danish Melanoma \cite{Andersen1993} ($N=205$) & Logistic & \texttt{Thickness} $\times$ \texttt{Diag\_Year} & $763.5$ & $5.9e+05$ & $\bm{1.00}$ & $\bm{+4.539}$ ($2.7e-05$) & $+457.03$ ($\bm{0.13}$) & $20.3\%$ & $\bm{7.5\%}$ & False Neg \\
+15 & Siri Body Fat \cite{Penrose1985} ($N=252$) & OLS & \texttt{Wrist\_cm} $\times$ \texttt{Abdomen\_cm} & $8.6$ & $4.4e+02$ & $\bm{1.00}$ & $\bm{-2.007}$ ($2.2e-05$) & $+2.32$ ($\bm{0.56}$) & $7.0\%$ & $\bm{5.6\%}$ & Sign Flip, False Neg, LASSO $\sqrt{2}$ \\
+16 & NCCTG Lung Cancer \cite{Loprinzi1994} ($N=167$) & OLS & \texttt{Pat\_Karno} $\times$ \texttt{Meal\_Joules} & $2.3$ & $4.0e+01$ & $\bm{1.00}$ & $\bm{+1.857}$ ($1.7e-04$) & $+0.66$ ($\bm{0.00}$) & $16.5\%$ & $\bm{27.5\%}$ & SE Inflated \\
+17 & WCGS Coronary \cite{Rosenman1975} ($N=3154$) & Logistic & \texttt{TypeA\_Behav} $\times$ \texttt{Cholesterol} & $5.2$ & $2.9e+01$ & $\bm{1.00}$ & $\bm{+22.459}$ ($1.0e+00$) & $-27.52$ ($\bm{0.00}$) & $93.4\%$ & $\bm{61.5\%}$ & Sign Flip, LASSO $\sqrt{2}$ \\
+18 & ACTG 175 HIV \cite{Hammer1996} ($N=2139$) & Cox & \texttt{Combo\_ART} $\times$ \texttt{Karnofsky} & $16.2$ & $2.8e+02$ & $\bm{1.00}$ & $\bm{+21290852118117956.000}$ ($0.0e+00$) & $+79947133775506304.00$ ($\bm{0.00}$) & $64.4\%$ & $\bm{48.9\%}$ & LASSO $\sqrt{2}$ \\
+19 & Mayo MGUS2 \cite{Kyle2002} ($N=1384$) & Cox & \texttt{M\_Spike} $\times$ \texttt{Hemoglobin} & $6.8$ & $5.2e+01$ & $\bm{1.00}$ & $\bm{+2.027}$ ($9.1e-195$) & $-1.59$ ($\bm{0.00}$) & $14.3\%$ & $\bm{15.4\%}$ & Sign Flip \\
+20 & Mayo FLC Assay \cite{Dispenzieri2012} ($N=7874$) & Cox & \texttt{FLC\_Sum} $\times$ \texttt{Sample\_Year} & $1296.4$ & $1.7e+06$ & $\bm{1.00}$ & $\bm{+1.118}$ ($0.0e+00$) & $-131.21$ ($\bm{0.00}$) & $36.3\%$ & $\bm{19.5\%}$ & Sign Flip \\
+21 & Rotterdam Breast \cite{Royston2013} ($N=2982$) & Cox & \texttt{Chemotherapy} $\times$ \texttt{Surg\_Year} & $636.9$ & $4.2e+05$ & $\bm{1.00}$ & $\bm{-2.302}$ ($2.4e-248$) & $+160.49$ ($\bm{0.00}$) & $39.8\%$ & $\bm{45.3\%}$ & Sign Flip, LASSO $\sqrt{2}$ \\
+22 & Retinopathy Laser \cite{DRS1976} ($N=394$) & Cox & \texttt{Laser\_Tx} $\times$ \texttt{Risk\_Score} & $6.6$ & $4.5e+01$ & $\bm{1.00}$ & $\bm{-6.800}$ ($4.1e-108$) & $+7.10$ ($\bm{0.00}$) & $53.5\%$ & $\bm{33.8\%}$ & Sign Flip \\
+\bottomrule
+\end{tabular}
+\end{table*}

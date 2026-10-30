@@ -1,0 +1,17 @@
+\begin{table*}[htbp]
+\centering
+\caption{Cross-Platform Benchmark Across Four External Medical Datasets: Exact Rational Hand Calculation ($\mathbb{Q}$) and Proposed Stan/PyMC QR-Orthogonal NCP vs.\ Existing Standard Libraries (\texttt{statsmodels}, \texttt{scikit-learn}, and Raw HMC-NUTS)}
+\label{tab:appendix_stan_pymc_comparison}
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrr}
+\toprule
+\textbf{Medical Cohort} & \textbf{Exact $\mathbb{Q}$ Truth} & \textbf{Proposed Stan/PyMC QR-NCP [95\% CrI] (Div\%)} & \textbf{\texttt{statsmodels} Raw ($p$)} & \textbf{\texttt{sklearn} Default $L_2$} & \textbf{Raw Stan/PyMC HMC [95\% CrI] (Div\%)} \\
+\midrule
+1. Diabetes (OLS) & $\bm{+1.3835}$ & $\bm{+1.3915}$ $[+0.962, +1.815]$ ($0.0\%$) & $-1.4891$ ($p=0.219$) & $-1.4863$ & $-0.9054$ $[-1.922, +0.111]$ ($\bm{100.0\%}$) \\
+2. Birthwt (Logit) & $\bm{+0.7513}$ & $\bm{+0.7329}$ $[+0.059, +1.399]$ ($0.0\%$) & $-1.5109$ ($p=0.350$) & $-0.4251$ & $-0.4115$ $[-2.906, +2.083]$ ($\bm{100.0\%}$) \\
+3. PBCSeq (LMM) & $\bm{+0.0120}$ & $\bm{+0.0115}$ $[-0.009, +0.033]$ ($0.0\%$) & $-0.3390$ ($p=0.000$) & $+0.0092$ & $-0.0011$ $[-0.004, +0.001]$ ($\bm{100.0\%}$) \\
+4. Sleep (LMM) & $\bm{+10.2643}$ & $\bm{+10.2072}$ $[+7.844, +12.594]$ ($0.0\%$) & $-11.1791$ ($p=0.301$) & $-10.6251$ & $+23.5818$ $[+10.665, +36.499]$ ($\bm{100.0\%}$) \\
+\bottomrule
+\end{tabular}
+\end{table*}
