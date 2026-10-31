@@ -1,0 +1,25 @@
+# ==============================================================================
+# requirements.txt
+# Python 3.10+ Dependencies for Medical Interaction Exact Rational (Q) Audit,
+# 28-Cohort Empirical Benchmarks, and Bayesian QR-Orthogonal NCP Verification
+# ==============================================================================
+
+# --- Core Numerical, Scientific, and Symbolic Rational (Q) Computing ---
+numpy>=1.24.0,<3.0.0
+scipy>=1.10.0,<2.0.0
+sympy>=1.12,<2.0.0
+pandas>=2.0.0,<3.0.0
+
+# --- Frequentist Biostatistics, GLMs, Survival, and Machine Learning ---
+statsmodels>=0.14.0,<1.0.0
+scikit-learn>=1.3.0,<2.0.0
+lifelines>=0.27.8,<1.0.0
+shap>=0.43.0,<1.0.0
+
+# --- Publication-Quality Vector Visualization ---
+matplotlib>=3.7.0,<4.0.0
+
+# --- Bayesian HMC-NUTS Probabilistic Programming (PyMC v5 & Stan Bridge) ---
+pymc>=5.10.0,<6.0.0
+arviz>=0.17.0,<1.0.0
+cmdstanpy>=1.2.0,<2.0.0
