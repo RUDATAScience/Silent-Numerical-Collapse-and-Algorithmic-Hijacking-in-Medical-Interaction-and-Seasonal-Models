@@ -1,0 +1,4 @@
+case_id,cohort,q_b1,prop_mean,prop_lo,prop_hi,prop_cond,prop_div,prop_bfmi,prop_rhat,prop_ess,raw_mean,raw_lo,raw_hi,raw_cond,raw_div,raw_bfmi,raw_rhat,raw_ess
+26,Case 26: Pima Diabetes (N=532),0.38189,0.38154,0.3547,0.4108,1.02,0.0,1.05,1.004,1373,0.09428,-0.055,0.2436,7486.0,100.0,0.45,3.5,0.0
+27,Case 27: Mayo Longitudinal PBCSeq (N=1945),0.15799,0.15776,0.1395,0.1776,1.02,0.0,1.05,1.004,1451,-0.11149,-0.286,0.063,360.2,100.0,0.11,3.5,0.0
+28,Case 28: NCCTG Lung Multi-Center (N=167),1.84073,1.82954,0.9685,2.7655,1.02,0.0,1.05,1.004,1801,1.25269,-0.8349,3.3403,2619.8,100.0,0.11,3.5,0.0
