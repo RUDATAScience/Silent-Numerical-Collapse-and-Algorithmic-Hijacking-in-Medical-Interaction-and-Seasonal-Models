@@ -42,3 +42,29 @@ In clinical biostatistics, epidemiology, and medical AI, physiological homeostas
 | **Case 28: NCCTG Lung Multi-Center** ($N=167$) | **Proposed QR-NCP** | **`+1.841`** | **`+1.830` `[+0.97, +2.77]`** | **`1.02`** | **`0.0%`** | **`1.05`** | **`1.004`** | **`1801`** | **Exact $\mathbb{Q}$ Recovery** |
 | (`Pat.Karno` $\times$ `Meal_kJ`) | Raw HMC-NUTS | — | `+1.253` `[-0.83, +3.34]` | `2619.8` | **`100.0%`** | **`0.11`** | `3.50` | `0.0` | **False Negative** & Funnel Arrest |
 
+4. Quick Start & Reproduction Guide1. One-Command End-to-End Pipeline (run_pipeline.sh)To run all AWK exact rational self-tests, execute all 28 cohort benchmarks (Cases 1–28), generate all .tex tables and .pdf figures, and compile main.tex via lualatex:Bashchmod +x run_pipeline.sh
+./run_pipeline.sh
+To audit and orthogonalize your own clinical CSV dataset (clinical_data.csv) and pipe the orthogonalized design matrix $\mathbf{Z}^{\perp}$ directly into the Python/SymPy/PyMC bridge:Bash./run_pipeline.sh --input clinical_data.csv --x1 2 --x2 3 --y 4 --prior-sd 2.5
+2. Zero-Dependency POSIX/GNU AWK Execution (No Python/R Required)Every table and exact rational ($\mathbb{Q}$) benchmark in the paper can be reproduced in milliseconds using only standard UNIX awk (gawk or nawk):Bash# (A) Self-test Proposition 3 (4-point seasonal Q model), Module 1 (400/201, 375/251, -200/201, 200/251), and Cases 26-28:
+awk -f strict_orthogonal_medical_audit.awk
+
+# (B) Reproduce all 22 Frequentist & ML cohorts (Cases 1-22) -> generates CSV & table_master_22_medical_cases.tex:
+awk -f run_all_22_medical_cases.awk
+
+# (C) Reproduce Longitudinal LMM cohorts (Propositions 15-17 & Cases 23-25) -> generates table_mixed_effects_cases_23_25.tex:
+awk -f verify_longitudinal_lmm_cases.awk
+
+# (D) Reproduce Bayesian HMC-NUTS audit (Propositions 18.1-20 & Cases 26-28) -> generates table_bayesian_hmc_verification.tex:
+awk -f verify_bayesian_hmc_nuts_traps.awk
+
+@article{Kawahata2026OrthogonalMedical,
+  author  = {Kawahata, Yasuko},
+  title   = {Silent Numerical Collapse and Algorithmic Hijacking in Medical Interaction and Seasonal Models: Exact Rational ($\mathbb{Q}$) Benchmarks vs.\ Floating-Point Statistical, Machine Learning, and Bayesian {HMC-NUTS} Libraries Across 28 Clinical Cohorts},
+  journal = {Working Paper / Preprint},
+  year    = {2026},
+  month   = {October},
+  note    = {Faculty of Sociology / Graduate School of Sociology, Rikkyo University}
+}
+
+chmod +x run_pipeline.sh *.awk
+./run_pipeline.sh
