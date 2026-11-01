@@ -1,0 +1,4 @@
+[Python Module 1 Conjugate Q] beta_0=400/201 (+1.99004975), beta_1=375/251 (+1.49402390), beta_2=-200/201 (-0.99502488), beta_3=200/251 (+0.79681275)
+[Python Case 26] Case 26: Pima Diabetes (N=532)             | Exact Q=+0.38189 (38189/100000) | Prop QR-NCP=+0.38154 (BFMI=1.05) vs Raw=+0.09428 (BFMI=0.45)
+[Python Case 27] Case 27: Mayo Longitudinal PBCSeq (N=1945) | Exact Q=+0.15799 (15799/100000) | Prop QR-NCP=+0.15776 (BFMI=1.05) vs Raw=-0.11149 (BFMI=0.11)
+[Python Case 28] Case 28: NCCTG Lung Multi-Center (N=167)   | Exact Q=+1.84073 (184073/100000) | Prop QR-NCP=+1.82954 (BFMI=1.05) vs Raw=+1.25269 (BFMI=0.11)

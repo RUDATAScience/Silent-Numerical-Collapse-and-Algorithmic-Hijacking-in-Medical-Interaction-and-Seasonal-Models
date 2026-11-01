@@ -1,0 +1,3 @@
+[Python Case 23] Case 23: Sleep Study   | Q Frac:  1047/100 | Prop B1=+10.470 (t= +6.77) vs Raw B1= -4.182 (t= -0.61) | Cholesky: 0.2091 -> 3.21e-07
+[Python Case 24] Case 24: Mayo PBCSeq   | Q Frac:    79/500 | Prop B1= +0.158 (t=+11.45) vs Raw B1= -0.112 (t= -1.00) | Cholesky: 0.3929 -> 9.34e-07
+[Python Case 25] Case 25: Orthodont     | Q Frac:     33/50 | Prop B1= +0.660 (t= +9.75) vs Raw B1= -0.572 (t= -0.81) | Cholesky: 0.3195 -> 1.10e-01

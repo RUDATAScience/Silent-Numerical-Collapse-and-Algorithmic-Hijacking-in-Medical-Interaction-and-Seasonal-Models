@@ -1,0 +1,7 @@
+[AWK Prop 15-16 (M1=0, c1=1)] rho_01=+0.500000 | Cholesky theta3/theta1=4.330e-01 | Exact Q Pullback=TRUE
+[AWK Prop 15-16 (M1=10, c1=1)] rho_01=-0.981981 | Cholesky theta3/theta1=2.062e-02 | Exact Q Pullback=TRUE
+[AWK Prop 15-16 (M1=100, c1=100)] rho_01=-0.999847 | Cholesky theta3/theta1=1.767e-06 | Exact Q Pullback=TRUE
+[AWK Prop 17 Ecological Leakage] True Within Beta_W3 = +0.000000 | Two-Stage Hierarchical GS-QR = +0.000000
+Case 23 | Case 23: Sleep Study   | Q Frac:  1047/100 | Prop B1=+10.470 (t= +6.77) vs Raw B1= -4.182 (t= -0.61) | Cholesky: 0.2091 -> 3.21e-07
+Case 24 | Case 24: Mayo PBCSeq   | Q Frac:    79/500 | Prop B1= +0.158 (t=+11.45) vs Raw B1= -0.112 (t= -1.00) | Cholesky: 0.3929 -> 9.34e-07
+Case 25 | Case 25: Orthodont     | Q Frac:     33/50 | Prop B1= +0.660 (t= +9.75) vs Raw B1= -0.572 (t= -0.81) | Cholesky: 0.3195 -> 1.10e-01

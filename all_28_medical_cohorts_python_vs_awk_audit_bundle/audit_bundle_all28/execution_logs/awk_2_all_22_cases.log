@@ -1,0 +1,26 @@
+====================================================================================================
+  AWK Master Benchmark Across All 22 Medical & Epidemiological Cohorts (Cases 1-22 in Exact Q)
+====================================================================================================
+Case  1 | Diabetes              (N= 442) | Q Frac:      28/25 | Prop B1=  +1.120 vs Raw=    -0.52 | SHAP: 58.4% -> 2.1%
+Case  3 | Mayo Clinic PBC       (N= 312) | Q Frac:  -141/1000 | Prop B1=  -0.141 vs Raw=    +0.11 | SHAP: 63.8% -> 3.4%
+Case  4 | Low Birth Weight      (N= 189) | Q Frac:    -1419/5 | Prop B1=-283.800 vs Raw=  -305.90 | SHAP: 49.2% -> 1.9%
+Case 15 | Siri Body Fat         (N= 252) | Q Frac:   -248/125 | Prop B1=  -1.984 vs Raw=    +2.32 | SHAP: 72.1% -> 2.8%
+Case  5 | Heart Failure         (N= 299) | Q Frac:    343/500 | Prop B1=  +0.686 vs Raw=    -4.82 | SHAP: 68.2% -> 3.1%
+Case  6 | Framingham CHD        (N=3658) | Q Frac:     13/200 | Prop B1=  +0.065 vs Raw=    +0.20 | SHAP: 54.7% -> 2.4%
+Case  7 | Breast Cancer WDBC    (N= 569) | Q Frac:    114/125 | Prop B1=  +0.912 vs Raw=    +0.34 | SHAP: 61.5% -> 4.2%
+Case 10 | Pima Diabetes         (N= 532) | Q Frac:     19/500 | Prop B1=  +0.038 vs Raw=    +0.01 | SHAP: 64.5% -> 1.8%
+Case 14 | Danish Melanoma       (N= 205) | Q Frac:    171/500 | Prop B1=  +0.342 vs Raw=   +42.70 | SHAP: 84.3% -> 2.6%
+Case 17 | WCGS Coronary         (N=3154) | Q Frac:    359/500 | Prop B1=  +0.718 vs Raw=    -0.82 | SHAP: 59.8% -> 3.0%
+Case  2 | UK Lung Deaths        (N=  72) | Q Frac:     4026/5 | Prop B1=+805.200 vs Raw=+57148.50 | SHAP: 88.1% -> 1.5%
+Case  8 | Chicago NMMAPS        (N=5114) | Q Frac:      41/50 | Prop B1=  +0.820 vs Raw=   -13.02 | SHAP: 76.4% -> 3.8%
+Case 16 | NCCTG Lung Energetics (N= 167) | Q Frac:    921/500 | Prop B1=  +1.842 vs Raw=    +0.66 | SHAP: 55.9% -> 2.9%
+Case  9 | Veteran Lung CA       (N= 137) | Q Frac:   -33/1000 | Prop B1=  -0.033 vs Raw=    -0.03 | SHAP: 62.0% -> 1.7%
+Case 11 | Stanford Heart Tx     (N= 103) | Q Frac: -1317/1000 | Prop B1=  -1.317 vs Raw=   +98.42 | SHAP: 86.7% -> 2.2%
+Case 12 | German Breast GBSG    (N= 686) | Q Frac:    -91/250 | Prop B1=  -0.364 vs Raw=    +0.39 | SHAP: 71.4% -> 2.5%
+Case 13 | Colon Cancer 5-FU     (N= 619) | Q Frac:    -64/125 | Prop B1=  -0.512 vs Raw=    +0.18 | SHAP: 69.3% -> 2.0%
+Case 18 | ACTG 175 HIV          (N=2139) | Q Frac:   -137/200 | Prop B1=  -0.685 vs Raw=    +0.82 | SHAP: 77.8% -> 1.9%
+Case 19 | Mayo MGUS2            (N=1384) | Q Frac:    123/500 | Prop B1=  +0.246 vs Raw=    -0.23 | SHAP: 66.1% -> 2.7%
+Case 20 | Mayo FLC Assay        (N=7874) | Q Frac:     69/500 | Prop B1=  +0.138 vs Raw=   -16.23 | SHAP: 89.6% -> 1.4%
+Case 21 | Rotterdam Breast      (N=2982) | Q Frac:   -159/500 | Prop B1=  -0.318 vs Raw=   +36.44 | SHAP: 85.2% -> 2.1%
+Case 22 | Retinopathy Laser     (N= 394) | Q Frac:    -98/125 | Prop B1=  -0.784 vs Raw=    +0.60 | SHAP: 74.8% -> 3.3%
+[AWK Cases 1-22 Summary] Sign Flips: 14/22 (63.6%) | Type S: 10/22 (45.5%) | LASSO Hijack: 10/22 (45.5%) | SHAP Hijack: 22/22 (100%)

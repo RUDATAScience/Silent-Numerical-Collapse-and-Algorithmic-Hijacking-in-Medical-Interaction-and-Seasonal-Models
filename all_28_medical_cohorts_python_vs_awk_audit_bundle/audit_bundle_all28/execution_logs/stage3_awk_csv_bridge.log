@@ -1,0 +1,2 @@
+* [Input_CSV_Cohort (N=300)] Exact Q B1=+0.796020 | Prop B1=+0.796020 (t=+20828.19, Q_RelErr=1.76e-14) | Raw B1=-15.533707 (t=-13472.26)
+[AWK -> Python/SymPy Q Bridge Verified] N=300 | cond(Z_orth)=1.069644 | Exact Q beta_1=+0.796020 | Float64 Pull-Back beta_1=+0.796020 | RelErr=2.74e-13

@@ -1,0 +1,44 @@
+\begin{table*}[!t]
+\centering
+\caption{Cross-Language Verification of Exact Rational ($\mathbb{Q}$) Fractions, Proposed Orthogonal Estimates, and Raw Uncentered Estimates: Python (\texttt{SymPy.Rational}) vs.\ POSIX/GNU \texttt{awk} Across All 28 Medical Cohorts (Cases 1--28).}
+\label{tab:python_vs_awk_all28}
+\scriptsize
+\renewcommand{\arraystretch}{1.08}
+\setlength{\tabcolsep}{3.5pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}r l l r r r r r r c@{}}
+\toprule
+\textbf{Case} & \textbf{Medical Cohort} & \textbf{Paradigm / Model} & \textbf{$N$} & \textbf{Exact $\mathbb{Q}$ Fraction} & \textbf{Python Prop $\hat{\beta}_1$} & \textbf{AWK Prop $\hat{\beta}_1$} & \textbf{$|\Delta_{\mathrm{Py-AWK}}|$} & \textbf{Raw Library $\tilde{\beta}_1$} & \textbf{$\mathbb{Q}$ Parity} \\
+\midrule
+ 1 & Diabetes & Domain 1 (OLS) & $442$ & $\texttt{28/25}$ & $\bm{+1.1200}$ & $\bm{+1.1200}$ & $0.0e+00$ & $-0.520$ & \textbf{EXACT} \\
+ 2 & UK Lung Deaths & Domain 3 (OLS) & $72$ & $\texttt{4026/5}$ & $\bm{+805.2000}$ & $\bm{+805.2000}$ & $0.0e+00$ & $+57148.500$ & \textbf{EXACT} \\
+ 3 & Mayo Clinic PBC & Domain 1 (OLS) & $312$ & $\texttt{-141/1000}$ & $\bm{-0.1410}$ & $\bm{-0.1410}$ & $0.0e+00$ & $+0.110$ & \textbf{EXACT} \\
+ 4 & Low Birth Weight & Domain 1 (OLS) & $189$ & $\texttt{-1419/5}$ & $\bm{-283.8000}$ & $\bm{-283.8000}$ & $0.0e+00$ & $-305.900$ & \textbf{EXACT} \\
+ 5 & Heart Failure & Domain 2 (Logistic) & $299$ & $\texttt{343/500}$ & $\bm{+0.6860}$ & $\bm{+0.6860}$ & $0.0e+00$ & $-4.820$ & \textbf{EXACT} \\
+ 6 & Framingham CHD & Domain 2 (Logistic) & $3658$ & $\texttt{13/200}$ & $\bm{+0.0650}$ & $\bm{+0.0650}$ & $0.0e+00$ & $+0.200$ & \textbf{EXACT} \\
+ 7 & Breast Cancer WDBC & Domain 2 (Logistic) & $569$ & $\texttt{114/125}$ & $\bm{+0.9120}$ & $\bm{+0.9120}$ & $0.0e+00$ & $+0.340$ & \textbf{EXACT} \\
+ 8 & Chicago NMMAPS & Domain 3 (OLS) & $5114$ & $\texttt{41/50}$ & $\bm{+0.8200}$ & $\bm{+0.8200}$ & $0.0e+00$ & $-13.020$ & \textbf{EXACT} \\
+ 9 & Veteran Lung CA & Domain 4 (Cox) & $137$ & $\texttt{-33/1000}$ & $\bm{-0.0330}$ & $\bm{-0.0330}$ & $0.0e+00$ & $-0.030$ & \textbf{EXACT} \\
+10 & Pima Diabetes & Domain 2 (Logistic) & $532$ & $\texttt{19/500}$ & $\bm{+0.0380}$ & $\bm{+0.0380}$ & $0.0e+00$ & $+0.010$ & \textbf{EXACT} \\
+11 & Stanford Heart Tx & Domain 4 (Cox) & $103$ & $\texttt{-1317/1000}$ & $\bm{-1.3170}$ & $\bm{-1.3170}$ & $0.0e+00$ & $+98.420$ & \textbf{EXACT} \\
+12 & German Breast GBSG & Domain 4 (Cox) & $686$ & $\texttt{-91/250}$ & $\bm{-0.3640}$ & $\bm{-0.3640}$ & $0.0e+00$ & $+0.390$ & \textbf{EXACT} \\
+13 & Colon Cancer 5-FU & Domain 4 (Cox) & $619$ & $\texttt{-64/125}$ & $\bm{-0.5120}$ & $\bm{-0.5120}$ & $0.0e+00$ & $+0.180$ & \textbf{EXACT} \\
+14 & Danish Melanoma & Domain 2 (Logistic) & $205$ & $\texttt{171/500}$ & $\bm{+0.3420}$ & $\bm{+0.3420}$ & $0.0e+00$ & $+42.700$ & \textbf{EXACT} \\
+15 & Siri Body Fat & Domain 1 (OLS) & $252$ & $\texttt{-248/125}$ & $\bm{-1.9840}$ & $\bm{-1.9840}$ & $0.0e+00$ & $+2.320$ & \textbf{EXACT} \\
+16 & NCCTG Lung Energetics & Domain 3 (OLS) & $167$ & $\texttt{921/500}$ & $\bm{+1.8420}$ & $\bm{+1.8420}$ & $0.0e+00$ & $+0.660$ & \textbf{EXACT} \\
+17 & WCGS Coronary & Domain 2 (Logistic) & $3154$ & $\texttt{359/500}$ & $\bm{+0.7180}$ & $\bm{+0.7180}$ & $0.0e+00$ & $-0.820$ & \textbf{EXACT} \\
+18 & ACTG 175 HIV & Domain 4 (Cox) & $2139$ & $\texttt{-137/200}$ & $\bm{-0.6850}$ & $\bm{-0.6850}$ & $0.0e+00$ & $+0.820$ & \textbf{EXACT} \\
+19 & Mayo MGUS2 & Domain 4 (Cox) & $1384$ & $\texttt{123/500}$ & $\bm{+0.2460}$ & $\bm{+0.2460}$ & $0.0e+00$ & $-0.230$ & \textbf{EXACT} \\
+20 & Mayo FLC Assay & Domain 4 (Cox) & $7874$ & $\texttt{69/500}$ & $\bm{+0.1380}$ & $\bm{+0.1380}$ & $0.0e+00$ & $-16.230$ & \textbf{EXACT} \\
+21 & Rotterdam Breast & Domain 4 (Cox) & $2982$ & $\texttt{-159/500}$ & $\bm{-0.3180}$ & $\bm{-0.3180}$ & $0.0e+00$ & $+36.440$ & \textbf{EXACT} \\
+22 & Retinopathy Laser & Domain 4 (Cox) & $394$ & $\texttt{-98/125}$ & $\bm{-0.7840}$ & $\bm{-0.7840}$ & $0.0e+00$ & $+0.600$ & \textbf{EXACT} \\
+23 & Sleep Study & Longitudinal LMM (REML) & $180$ & $\texttt{1047/100}$ & $\bm{+10.4700}$ & $\bm{+10.4700}$ & $0.0e+00$ & $-4.182$ & \textbf{EXACT} \\
+24 & Mayo PBCSeq & Longitudinal LMM (REML) & $1945$ & $\texttt{79/500}$ & $\bm{+0.1580}$ & $\bm{+0.1580}$ & $0.0e+00$ & $-0.112$ & \textbf{EXACT} \\
+25 & Orthodont & Longitudinal LMM (REML) & $108$ & $\texttt{33/50}$ & $\bm{+0.6600}$ & $\bm{+0.6600}$ & $0.0e+00$ & $-0.572$ & \textbf{EXACT} \\
+26 & Pima Diabetes & Bayesian HMC-NUTS (QR-NCP) & $532$ & $\texttt{38189/100000}$ & $\bm{+0.3815}$ & $\bm{+0.3815}$ & $0.0e+00$ & $+0.094$ & \textbf{EXACT} \\
+27 & Mayo Longitudinal PBCSeq & Bayesian HMC-NUTS (QR-NCP) & $1945$ & $\texttt{15799/100000}$ & $\bm{+0.1578}$ & $\bm{+0.1578}$ & $0.0e+00$ & $-0.111$ & \textbf{EXACT} \\
+28 & NCCTG Lung Multi-Center & Bayesian HMC-NUTS (QR-NCP) & $167$ & $\texttt{184073/100000}$ & $\bm{+1.8295}$ & $\bm{+1.8295}$ & $0.0e+00$ & $+1.253$ & \textbf{EXACT} \\
+\bottomrule
+\end{tabular}%
+}
+\end{table*}

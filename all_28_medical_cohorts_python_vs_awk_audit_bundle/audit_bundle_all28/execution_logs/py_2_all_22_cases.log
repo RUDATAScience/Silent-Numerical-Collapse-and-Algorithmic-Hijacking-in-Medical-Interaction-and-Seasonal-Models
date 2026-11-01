@@ -1,0 +1,22 @@
+[Python Case  1] Diabetes              | Q Frac:      28/25 | Prop B1=  +1.120 vs Raw=    -0.52 | Q_Err=0.0e+00
+[Python Case  3] Mayo Clinic PBC       | Q Frac:  -141/1000 | Prop B1=  -0.141 vs Raw=    +0.11 | Q_Err=0.0e+00
+[Python Case  4] Low Birth Weight      | Q Frac:    -1419/5 | Prop B1=-283.800 vs Raw=  -305.90 | Q_Err=0.0e+00
+[Python Case 15] Siri Body Fat         | Q Frac:   -248/125 | Prop B1=  -1.984 vs Raw=    +2.32 | Q_Err=0.0e+00
+[Python Case  5] Heart Failure         | Q Frac:    343/500 | Prop B1=  +0.686 vs Raw=    -4.82 | Q_Err=0.0e+00
+[Python Case  6] Framingham CHD        | Q Frac:     13/200 | Prop B1=  +0.065 vs Raw=    +0.20 | Q_Err=0.0e+00
+[Python Case  7] Breast Cancer WDBC    | Q Frac:    114/125 | Prop B1=  +0.912 vs Raw=    +0.34 | Q_Err=0.0e+00
+[Python Case 10] Pima Diabetes         | Q Frac:     19/500 | Prop B1=  +0.038 vs Raw=    +0.01 | Q_Err=0.0e+00
+[Python Case 14] Danish Melanoma       | Q Frac:    171/500 | Prop B1=  +0.342 vs Raw=   +42.70 | Q_Err=0.0e+00
+[Python Case 17] WCGS Coronary         | Q Frac:    359/500 | Prop B1=  +0.718 vs Raw=    -0.82 | Q_Err=0.0e+00
+[Python Case  2] UK Lung Deaths        | Q Frac:     4026/5 | Prop B1=+805.200 vs Raw=+57148.50 | Q_Err=0.0e+00
+[Python Case  8] Chicago NMMAPS        | Q Frac:      41/50 | Prop B1=  +0.820 vs Raw=   -13.02 | Q_Err=0.0e+00
+[Python Case 16] NCCTG Lung Energetics | Q Frac:    921/500 | Prop B1=  +1.842 vs Raw=    +0.66 | Q_Err=0.0e+00
+[Python Case  9] Veteran Lung CA       | Q Frac:   -33/1000 | Prop B1=  -0.033 vs Raw=    -0.03 | Q_Err=0.0e+00
+[Python Case 11] Stanford Heart Tx     | Q Frac: -1317/1000 | Prop B1=  -1.317 vs Raw=   +98.42 | Q_Err=0.0e+00
+[Python Case 12] German Breast GBSG    | Q Frac:    -91/250 | Prop B1=  -0.364 vs Raw=    +0.39 | Q_Err=0.0e+00
+[Python Case 13] Colon Cancer 5-FU     | Q Frac:    -64/125 | Prop B1=  -0.512 vs Raw=    +0.18 | Q_Err=0.0e+00
+[Python Case 18] ACTG 175 HIV          | Q Frac:   -137/200 | Prop B1=  -0.685 vs Raw=    +0.82 | Q_Err=0.0e+00
+[Python Case 19] Mayo MGUS2            | Q Frac:    123/500 | Prop B1=  +0.246 vs Raw=    -0.23 | Q_Err=0.0e+00
+[Python Case 20] Mayo FLC Assay        | Q Frac:     69/500 | Prop B1=  +0.138 vs Raw=   -16.23 | Q_Err=0.0e+00
+[Python Case 21] Rotterdam Breast      | Q Frac:   -159/500 | Prop B1=  -0.318 vs Raw=   +36.44 | Q_Err=0.0e+00
+[Python Case 22] Retinopathy Laser     | Q Frac:    -98/125 | Prop B1=  -0.784 vs Raw=    +0.60 | Q_Err=0.0e+00
