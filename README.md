@@ -16,8 +16,7 @@
 
 **Author:** **Yasuko Kawahata**  
 Associate Professor, College of Sociology / Graduate School of Sociology, Rikkyo University  
-Registered Researcher, University Hospital Medical Information Network (**UMIN**, Japan)  
-IEEE Senior Member; Full Member, Sigma Xi  
+Researcher, University Hospital Medical Information Network (**UMIN**, Japan)  
 **Corresponding Author & Ethics/Audit Contact (UMIN):** [`kawahata-hc@umin.ac.jp`](mailto:kawahata-hc@umin.ac.jp)  
 **Repository URL:** <https://github.com/RUDATAScience/Silent-Numerical-Collapse-and-Algorithmic-Hijacking-in-Medical-Interaction-and-Seasonal-Models>
 
