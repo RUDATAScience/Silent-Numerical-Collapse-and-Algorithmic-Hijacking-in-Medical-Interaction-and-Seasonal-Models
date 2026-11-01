@@ -176,7 +176,6 @@ If you use our theoretical propositions, the `OrthogonalInteractionTransformer` 
 **著者:** **川畑 泰子 (Yasuko Kawahata)**  
 立教大学 社会学部 / 大学院社会学研究科 准教授  
 大学病院医療情報ネットワーク (**UMIN**) 登録研究員  
-IEEE Senior Member; Full Member, Sigma Xi  
 **責任著者・倫理および再現性監査連絡先 (UMIN):** [`kawahata-hc@umin.ac.jp`](mailto:kawahata-hc@umin.ac.jp)  
 **公開リポジトリ URL:** <https://github.com/RUDATAScience/Silent-Numerical-Collapse-and-Algorithmic-Hijacking-in-Medical-Interaction-and-Seasonal-Models>
 
