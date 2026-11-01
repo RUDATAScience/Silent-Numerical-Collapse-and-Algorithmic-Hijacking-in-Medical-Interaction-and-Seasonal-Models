@@ -1,0 +1,7 @@
+paradigm_group,n_cohorts,q_frac_match_rate,max_abs_diff_py_vs_awk,max_rel_diff_py_vs_awk,raw_sign_flip_count
+Bayesian HMC-NUTS (QR-NCP),3,1.0,0.0,0.0,1
+Domain 1 (OLS),4,1.0,0.0,0.0,3
+Domain 2 (Logistic),6,1.0,0.0,0.0,2
+Domain 3 (OLS),3,1.0,0.0,0.0,1
+Domain 4 (Cox),9,1.0,0.0,0.0,8
+Longitudinal LMM (REML),3,1.0,0.0,0.0,3

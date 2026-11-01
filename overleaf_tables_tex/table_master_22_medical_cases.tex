@@ -1,0 +1,48 @@
+\begin{table*}[!t]
+\centering
+\begin{threeparttable}
+\caption{Master Empirical Benchmark Across All 22 Public Medical and Epidemiological Datasets (Cases 1--22): Exact Rational ($\Q$) / Proposed Gram--Schmidt Orthogonalized Protocol vs.\ Raw Uncentered and Post-Scaled Library Outputs.}
+\label{tab:master_22_medical_cases}
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{3.2pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}r l l l r r r r r r r l@{}}
+\toprule
+& & & & & \multicolumn{2}{c}{\textbf{Max Structural VIF}} & \multicolumn{2}{c}{\textbf{Target Main Effect $\beta_1$ ($p$-value)}} & \multicolumn{2}{c}{\textbf{Interaction $|\text{SHAP}|$}} & \\
+\cmidrule(lr){6-7} \cmidrule(lr){8-9} \cmidrule(lr){10-11}
+\textbf{\#} & \textbf{Medical Cohort ($N$)} & \textbf{Model} & \textbf{Interaction $X_1 \times X_2$} & \textbf{$\tau_{M,2}$\tnote{a}} & \textbf{Raw} & \textbf{Prop\tnote{b}} & \textbf{Exact $\Q$ / Prop $\hat{\beta}_1$\tnote{c}} & \textbf{Raw Fit $\tilde{\beta}_1$\tnote{d}} & \textbf{Raw} & \textbf{Prop} & \textbf{Primary Failure Modes\tnote{e}} \\
+\midrule
+\multicolumn{12}{@{}l}{\textit{\textbf{Domain I: Metabolic, Hepatobiliary, Obstetrical, and Anthropometric Linear Models (OLS)}}} \\
+1  & Diabetes \cite{Efron2004} ($442$) & OLS      & \texttt{BP} $\times$ \texttt{BMI} & $6.0$ & $5.5\times 10^{1}$ & $\bm{1.00}$ & $\bm{+1.120}$ ($3.6e-06$) & $-0.52$ ($\bm{0.72}$) & $58.4\%$ & $\bm{2.1\%}$ & Sign Flip, False Neg, LASSO $\sqrt{2}$ \\
+3  & Mayo Clinic PBC \cite{Cox1972} ($312$) & OLS      & \texttt{Bilirubin} $\times$ \texttt{Protime} & $10.7$ & $1.2\times 10^{2}$ & $\bm{1.00}$ & $\bm{-0.141}$ ($1.8e-16$) & $+0.11$ ($\bm{0.25}$) & $63.8\%$ & $\bm{3.4\%}$ & Sign Flip, False Neg, LASSO $\sqrt{2}$ \\
+4  & Low Birth Weight \cite{Venables2002} ($189$) & OLS      & \texttt{Smoke} $\times$ \texttt{LWT} & $4.2$ & $3.0\times 10^{1}$ & $\bm{1.00}$ & $\bm{-283.800}$ ($4.9e-03$) & $-305.90$ ($\bm{0.56}$) & $49.2\%$ & $\bm{1.9\%}$ & False Neg, SE Inflated \\
+15 & Siri Body Fat \cite{Penrose1985} ($252$) & OLS      & \texttt{Wrist\_cm} $\times$ \texttt{Abdomen\_cm} & $8.6$ & $4.6\times 10^{2}$ & $\bm{1.00}$ & $\bm{-1.984}$ ($3.1e-05$) & $+2.32$ ($\bm{0.56}$) & $72.1\%$ & $\bm{2.8\%}$ & Sign Flip, False Neg, LASSO $\sqrt{2}$ \\
+\midrule
+\multicolumn{12}{@{}l}{\textit{\textbf{Domain II: Cardiovascular and Oncological Diagnostic Cohorts (Logistic IRLS)}}} \\
+5  & Heart Failure \cite{Chicco2020} ($299$) & Logistic & \texttt{Creatinine} $\times$ \texttt{Sodium} & $31.0$ & $9.6\times 10^{2}$ & $\bm{1.00}$ & $\bm{+0.686}$ ($1.2e-06$) & $-4.82$ ($\bm{0.21}$) & $68.2\%$ & $\bm{3.1\%}$ & Sign Flip, False Neg, LASSO $\sqrt{2}$ \\
+6  & Framingham CHD \cite{Kannel1961} ($3658$) & Logistic & \texttt{TotChol} $\times$ \texttt{Age} & $5.8$ & $6.7\times 10^{1}$ & $\bm{1.00}$ & $\bm{+0.065}$ ($2.4e-11$) & $+0.20$ ($\bm{0.08}$) & $54.7\%$ & $\bm{2.4\%}$ & False Neg, LASSO $\sqrt{2}$ \\
+7  & Breast Cancer WDBC \cite{Street1993} ($569$) & Logistic & \texttt{Worst\_Area} $\times$ \texttt{Smoothness} & $6.9$ & $8.3\times 10^{1}$ & $\bm{1.00}$ & $\bm{+0.912}$ ($1.0e-16$) & $+0.34$ ($\bm{0.48}$) & $61.5\%$ & $\bm{4.2\%}$ & False Neg, LASSO $\sqrt{2}$ \\
+10 & Pima Diabetes \cite{Smith1988} ($532$) & Logistic & \texttt{Glucose} $\times$ \texttt{BP} & $5.8$ & $5.2\times 10^{1}$ & $\bm{1.00}$ & $\bm{+0.038}$ ($1.0e-16$) & $+0.01$ ($\bm{0.34}$) & $64.5\%$ & $\bm{1.8\%}$ & False Neg, LASSO $\sqrt{2}$ \\
+14 & Danish Melanoma \cite{Andersen1993} ($205$) & Logistic & \texttt{Thickness} $\times$ \texttt{Diag\_Year} & $763.5$ & $5.8\times 10^{5}$ & $\bm{1.00}$ & $\bm{+0.342}$ ($1.4e-05$) & $+42.70$ ($\bm{0.28}$) & $84.3\%$ & $\bm{2.6\%}$ & False Neg, LASSO $\sqrt{2}$, R Drop \\
+17 & WCGS Coronary \cite{Rosenman1975} ($3154$) & Logistic & \texttt{TypeA\_Behav} $\times$ \texttt{Chol} & $5.2$ & $5.5\times 10^{1}$ & $\bm{1.00}$ & $\bm{+0.718}$ ($1.9e-09$) & $-0.82$ ($\bm{0.19}$) & $59.8\%$ & $\bm{3.0\%}$ & Sign Flip, False Neg, LASSO $\sqrt{2}$ \\
+\midrule
+\multicolumn{12}{@{}l}{\textit{\textbf{Domain III: Environmental, Seasonal, and Extreme Scale-Ratio Cohorts (OLS)}}} \\
+2  & UK Lung Deaths \cite{Venables2002} ($72$) & OLS      & \texttt{Winter\_Cos} $\times$ \texttt{Year} & $1142.8$ & $1.3\times 10^{6}$ & $\bm{1.00}$ & $\bm{+805.200}$ ($1.0e-16$) & $+57148.50$ ($\bm{0.09}$) & $88.1\%$ & $\bm{1.5\%}$ & False Neg, LASSO $\sqrt{2}$, R Drop \\
+8  & Chicago NMMAPS \cite{Samet2000} ($5114$) & OLS      & \texttt{PM10} $\times$ \texttt{Temp\_Kelvin} & $26.5$ & $7.0\times 10^{2}$ & $\bm{1.00}$ & $\bm{+0.820}$ ($6.2e-06$) & $-13.02$ ($\bm{0.14}$) & $76.4\%$ & $\bm{3.8\%}$ & Sign Flip, False Neg, LASSO $\sqrt{2}$ \\
+16 & NCCTG Lung Energetics \cite{Loprinzi1994} ($167$) & OLS      & \texttt{Pat\_Karno} $\times$ \texttt{Meal\_J} & $2.3$ & $1.9\times 10^{1}$ & $\bm{1.00}$ & $\bm{+1.842}$ ($4.5e-09$) & $+0.66$ ($\bm{0.28}$) & $55.9\%$ & $\bm{2.9\%}$ & False Neg, Scale $\tau_S > 10^7$ \\
+\midrule
+\multicolumn{12}{@{}l}{\textit{\textbf{Domain IV: Oncological, Hematological, and Ophthalmic Survival Trials (Cox Proportional Hazards)}}} \\
+9  & Veteran Lung CA \cite{Kalbfleisch2002} ($137$) & Cox      & \texttt{Karnofsky} $\times$ \texttt{Age} & $5.5$ & $4.2\times 10^{1}$ & $\bm{1.00}$ & $\bm{-0.033}$ ($1.1e-07$) & $-0.03$ ($\bm{0.29}$) & $62.0\%$ & $\bm{1.7\%}$ & False Neg, LASSO $\sqrt{2}$ \\
+11 & Stanford Heart Tx \cite{Crowley1977} ($103$) & Cox      & \texttt{Transplant} $\times$ \texttt{Accept\_Yr} & $1065.4$ & $2.5\times 10^{6}$ & $\bm{1.00}$ & $\bm{-1.317}$ ($3.8e-06$) & $+98.42$ ($\bm{0.24}$) & $86.7\%$ & $\bm{2.2\%}$ & Sign Flip, False Neg, R Drop \\
+12 & German Breast GBSG \cite{Sauerbrei1999} ($686$) & Cox      & \texttt{Tamoxifen} $\times$ \texttt{Age} & $5.2$ & $2.9\times 10^{1}$ & $\bm{1.00}$ & $\bm{-0.364}$ ($2.1e-04$) & $+0.39$ ($\bm{0.44}$) & $71.4\%$ & $\bm{2.5\%}$ & Sign Flip, False Neg, LASSO $\sqrt{2}$ \\
+13 & Colon Cancer 5-FU \cite{Moertel1990} ($619$) & Cox      & \texttt{Lev\_5FU} $\times$ \texttt{Age} & $5.0$ & $3.6\times 10^{1}$ & $\bm{1.00}$ & $\bm{-0.512}$ ($8.4e-07$) & $+0.18$ ($\bm{0.71}$) & $69.3\%$ & $\bm{2.0\%}$ & Sign Flip, False Neg, LASSO $\sqrt{2}$ \\
+18 & ACTG 175 HIV \cite{Hammer1996} ($2139$) & Cox      & \texttt{Combo\_ART} $\times$ \texttt{Karnofsky} & $16.2$ & $2.6\times 10^{2}$ & $\bm{1.00}$ & $\bm{-0.685}$ ($1.0e-16$) & $+0.82$ ($\bm{0.26}$) & $77.8\%$ & $\bm{1.9\%}$ & Sign Flip, False Neg, LASSO $\sqrt{2}$ \\
+19 & Mayo MGUS2 \cite{Kyle2002} ($1384$) & Cox      & \texttt{M\_Spike} $\times$ \texttt{Hemoglobin} & $6.8$ & $6.8\times 10^{1}$ & $\bm{1.00}$ & $\bm{+0.246}$ ($1.5e-06$) & $-0.23$ ($\bm{0.45}$) & $66.1\%$ & $\bm{2.7\%}$ & Sign Flip, False Neg, LASSO $\sqrt{2}$ \\
+20 & Mayo FLC Assay \cite{Dispenzieri2012} ($7874$) & Cox      & \texttt{FLC\_Sum} $\times$ \texttt{Sample\_Yr} & $1296.4$ & $1.7\times 10^{6}$ & $\bm{1.00}$ & $\bm{+0.138}$ ($1.0e-16$) & $-16.23$ ($\bm{0.31}$) & $89.6\%$ & $\bm{1.4\%}$ & Sign Flip, False Neg, R Drop \\
+21 & Rotterdam Breast \cite{Royston2013} ($2982$) & Cox      & \texttt{Chemo} $\times$ \texttt{Surg\_Year} & $636.9$ & $4.1\times 10^{5}$ & $\bm{1.00}$ & $\bm{-0.318}$ ($3.2e-06$) & $+36.44$ ($\bm{0.19}$) & $85.2\%$ & $\bm{2.1\%}$ & Sign Flip, False Neg, R Drop \\
+22 & Retinopathy Laser \cite{DRS1976} ($394$) & Cox      & \texttt{Laser\_Tx} $\times$ \texttt{Risk\_Score} & $6.6$ & $4.4\times 10^{1}$ & $\bm{1.00}$ & $\bm{-0.784}$ ($1.4e-09$) & $+0.60$ ($\bm{0.32}$) & $74.8\%$ & $\bm{3.3\%}$ & Sign Flip, False Neg, LASSO $\sqrt{2}$ \\
+\bottomrule
+\end{tabular}%
+}
+\end{threeparttable}
+\end{table*}

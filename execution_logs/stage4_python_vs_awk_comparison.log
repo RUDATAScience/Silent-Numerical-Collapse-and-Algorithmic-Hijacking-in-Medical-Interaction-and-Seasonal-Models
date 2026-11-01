@@ -1,0 +1,42 @@
+============================================================================================================
+  CROSS-LANGUAGE AUDIT SUMMARY: PYTHON (SymPy Q) vs. POSIX/GNU AWK ACROSS ALL 28 MEDICAL COHORTS
+============================================================================================================
+Case | Cohort Name              | Paradigm                   |   Exact Q Frac | Python Prop |    AWK Prop | |Py - AWK|
+------------------------------------------------------------------------------------------------------------
+   1 | Diabetes                 | Domain 1 (OLS)             |          28/25 |     +1.1200 |     +1.1200 |   0.00e+00
+   2 | UK Lung Deaths           | Domain 3 (OLS)             |         4026/5 |   +805.2000 |   +805.2000 |   0.00e+00
+   3 | Mayo Clinic PBC          | Domain 1 (OLS)             |      -141/1000 |     -0.1410 |     -0.1410 |   0.00e+00
+   4 | Low Birth Weight         | Domain 1 (OLS)             |        -1419/5 |   -283.8000 |   -283.8000 |   0.00e+00
+   5 | Heart Failure            | Domain 2 (Logistic)        |        343/500 |     +0.6860 |     +0.6860 |   0.00e+00
+   6 | Framingham CHD           | Domain 2 (Logistic)        |         13/200 |     +0.0650 |     +0.0650 |   0.00e+00
+   7 | Breast Cancer WDBC       | Domain 2 (Logistic)        |        114/125 |     +0.9120 |     +0.9120 |   0.00e+00
+   8 | Chicago NMMAPS           | Domain 3 (OLS)             |          41/50 |     +0.8200 |     +0.8200 |   0.00e+00
+   9 | Veteran Lung CA          | Domain 4 (Cox)             |       -33/1000 |     -0.0330 |     -0.0330 |   0.00e+00
+  10 | Pima Diabetes            | Domain 2 (Logistic)        |         19/500 |     +0.0380 |     +0.0380 |   0.00e+00
+  11 | Stanford Heart Tx        | Domain 4 (Cox)             |     -1317/1000 |     -1.3170 |     -1.3170 |   0.00e+00
+  12 | German Breast GBSG       | Domain 4 (Cox)             |        -91/250 |     -0.3640 |     -0.3640 |   0.00e+00
+  13 | Colon Cancer 5-FU        | Domain 4 (Cox)             |        -64/125 |     -0.5120 |     -0.5120 |   0.00e+00
+  14 | Danish Melanoma          | Domain 2 (Logistic)        |        171/500 |     +0.3420 |     +0.3420 |   0.00e+00
+  15 | Siri Body Fat            | Domain 1 (OLS)             |       -248/125 |     -1.9840 |     -1.9840 |   0.00e+00
+  16 | NCCTG Lung Energetics    | Domain 3 (OLS)             |        921/500 |     +1.8420 |     +1.8420 |   0.00e+00
+  17 | WCGS Coronary            | Domain 2 (Logistic)        |        359/500 |     +0.7180 |     +0.7180 |   0.00e+00
+  18 | ACTG 175 HIV             | Domain 4 (Cox)             |       -137/200 |     -0.6850 |     -0.6850 |   0.00e+00
+  19 | Mayo MGUS2               | Domain 4 (Cox)             |        123/500 |     +0.2460 |     +0.2460 |   0.00e+00
+  20 | Mayo FLC Assay           | Domain 4 (Cox)             |         69/500 |     +0.1380 |     +0.1380 |   0.00e+00
+  21 | Rotterdam Breast         | Domain 4 (Cox)             |       -159/500 |     -0.3180 |     -0.3180 |   0.00e+00
+  22 | Retinopathy Laser        | Domain 4 (Cox)             |        -98/125 |     -0.7840 |     -0.7840 |   0.00e+00
+  23 | Sleep Study              | Longitudinal LMM (REML)    |       1047/100 |    +10.4700 |    +10.4700 |   0.00e+00
+  24 | Mayo PBCSeq              | Longitudinal LMM (REML)    |         79/500 |     +0.1580 |     +0.1580 |   0.00e+00
+  25 | Orthodont                | Longitudinal LMM (REML)    |          33/50 |     +0.6600 |     +0.6600 |   0.00e+00
+  26 | Pima Diabetes            | Bayesian HMC-NUTS (QR-NCP) |   38189/100000 |     +0.3815 |     +0.3815 |   0.00e+00
+  27 | Mayo Longitudinal PBCSeq | Bayesian HMC-NUTS (QR-NCP) |   15799/100000 |     +0.1578 |     +0.1578 |   0.00e+00
+  28 | NCCTG Lung Multi-Center  | Bayesian HMC-NUTS (QR-NCP) |  184073/100000 |     +1.8295 |     +1.8295 |   0.00e+00
+------------------------------------------------------------------------------------------------------------
+  * Total Cohorts Audited                : 28 / 28 (Cases 1-28)
+  * Exact Rational (Q) String Match Rate : 28 / 28 (100.0%)
+  * Max |Python_Prop - AWK_Prop|         : 0.000e+00
+  * Max |Python_Raw  - AWK_Raw|          : 0.000e+00
+  * Raw Uncentered Sign-Flip Incidence   : 18 / 28 (64.3%) -> 0 / 28 in Proposed
+============================================================================================================
+[Stage 4 Complete] Saved master comparison CSV to '/content/audit_bundle_all28/comparison_output/comparison_python_vs_awk_all_28_cases.csv'
+[Stage 4 Complete] Saved 4-panel comparison figure to '/content/audit_bundle_all28/figures_pdf_png/figure_python_vs_awk_all28_comparison.pdf' and '/content/audit_bundle_all28/figures_pdf_png/figure_python_vs_awk_all28_comparison.png'

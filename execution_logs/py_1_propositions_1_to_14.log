@@ -1,0 +1,20 @@
+================================================================================================
+[Python Exact Q Proof 1] Proposition 2: Symbolic Upper-Triangular Matrix T and T^-1 over Q
+================================================================================================
+  * Symbolic T^-1 * beta_ref = [M1*M2*beta3 - M1*beta1 - M2*beta2 + beta0, (-M2*beta3 + beta1)/c1, (-M1*beta3 + beta2)/c2, beta3/(c1*c2)]
+  * Verified: T * tilde_beta == beta_ref holds identically over Q.
+
+================================================================================================
+[Python Exact Q Proof 2] Proposition 3 (Table 5): 4-Point Seasonal Model in Q
+================================================================================================
+  * Raw Uncentered (M1=100) in Q : [-192, 2, -397, 4]
+  * Simple Centered (u * v) in Q : [8, 2, 3, 4]  [Intercept leaked 10 -> 8]
+  * Proposed GS-Orthogonal  in Q : [10, 2, 3, 4]  [Exact recovery of (10, 2, 3, 4)]
+
+================================================================================================
+[Python Exact Q Proof 3] Proposition 13 (Table 7): 4-Point CART & 8 TreeSHAP Coalitions in Q
+================================================================================================
+  * Root Split SSE Reduction in Q:Main = 4, Product X3 = 16/3 (16/3 > 4)
+  * Exact TreeSHAP in Q: phi_1=[0, 0, 0, 0], phi_2=[0, 0, 0, 0], phi_3=[-2/3, -2/3, -2/3, 2] (100% Hijacked)
+
+[Python Script 1/5 Completed] Exported all 5 theoretical PDF/PNG vector figures.

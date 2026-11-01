@@ -1,0 +1,23 @@
+case_id,domain_id,cohort_name,citation_key,n_obs,model_type,interaction_pair,tau_m2,vif_raw,vif_prop,beta1_exact_q_frac,beta1_prop,p_prop,beta1_raw,p_raw,se_inflation_ratio,cond_x_raw,shap_raw_pct,shap_prop_pct,sign_flip,lasso_sqrt2_hijack,q_pullback_rel_err,failure_modes
+1,1,Diabetes,Efron2004,442,OLS,BP x BMI,6.0,55.0,1.0,28/25,1.12,3.6e-06,-0.52,0.72,5.4,1850.0,58.4,2.1,1,1,0.0,Sign Flip; False Neg; LASSO sqrt(2)
+3,1,Mayo Clinic PBC,Cox1972,312,OLS,Bilirubin x Protime,10.7,120.0,1.0,-141/1000,-0.141,1.8e-16,0.11,0.25,10.43,4120.0,63.8,3.4,1,1,0.0,Sign Flip; False Neg; LASSO sqrt(2)
+4,1,Low Birth Weight,Venables2002,189,OLS,Smoke x LWT,4.2,30.0,1.0,-1419/5,-283.8,0.0049,-305.9,0.56,4.45,890.0,49.2,1.9,0,0,0.0,False Neg; SE Inflated
+15,1,Siri Body Fat,Penrose1985,252,OLS,Wrist_cm x Abdomen_cm,8.6,460.0,1.0,-248/125,-1.984,3.1e-05,2.32,0.56,8.54,14200.0,72.1,2.8,1,1,0.0,Sign Flip; False Neg; LASSO sqrt(2)
+5,2,Heart Failure,Chicco2020,299,Logistic,Creatinine x Sodium,31.0,960.0,1.0,343/500,0.686,1.2e-06,-4.82,0.21,11.35,68400.0,68.2,3.1,1,1,0.0,Sign Flip; False Neg; LASSO sqrt(2)
+6,2,Framingham CHD,Kannel1961,3658,Logistic,TotChol x Age,5.8,67.0,1.0,13/200,0.065,2.4e-11,0.2,0.08,4.43,19200.0,54.7,2.4,0,1,0.0,False Neg; LASSO sqrt(2)
+7,2,Breast Cancer WDBC,Street1993,569,Logistic,Worst_Area x Smoothness,6.9,83.0,1.0,114/125,0.912,1e-16,0.34,0.48,4.56,54000.0,61.5,4.2,0,1,0.0,False Neg; LASSO sqrt(2)
+10,2,Pima Diabetes,Smith1988,532,Logistic,Glucose x BP,5.8,52.0,1.0,19/500,0.038,1e-16,0.01,0.34,1.93,16500.0,64.5,1.8,0,0,0.0,False Neg; LASSO sqrt(2)
+14,2,Danish Melanoma,Andersen1993,205,Logistic,Thickness x Diag_Year,763.5,580000.0,1.0,171/500,0.342,1.4e-05,42.7,0.28,276.4,11800000.0,84.3,2.6,0,0,0.0,False Neg; LASSO sqrt(2); R Drop
+17,2,WCGS Coronary,Rosenman1975,3154,Logistic,TypeA_Behav x Chol,5.2,55.0,1.0,359/500,0.718,1.9e-09,-0.82,0.19,4.82,41200.0,59.8,3.0,1,1,0.0,Sign Flip; False Neg; LASSO sqrt(2)
+2,3,UK Lung Deaths,Venables2002,72,OLS,Winter_Cos x Year,1142.8,1300000.0,1.0,4026/5,805.2,1e-16,57148.5,0.09,1439.0,24500000.0,88.1,1.5,0,0,0.0,False Neg; LASSO sqrt(2); R Drop
+8,3,Chicago NMMAPS,Samet2000,5114,OLS,PM10 x Temp_Kelvin,26.5,700.0,1.0,41/50,0.82,6.2e-06,-13.02,0.14,26.71,82000.0,76.4,3.8,1,0,0.0,Sign Flip; False Neg; LASSO sqrt(2)
+16,3,NCCTG Lung Energetics,Loprinzi1994,167,OLS,Pat_Karno x Meal_J,2.3,19.0,1.0,921/500,1.842,4.5e-09,0.66,0.28,0.181,126000000.0,55.9,2.9,0,0,0.0,False Neg; Scale tau_S > 10^7; pinv Truncation
+9,4,Veteran Lung CA,Kalbfleisch2002,137,Cox,Karnofsky x Age,5.5,42.0,1.0,-33/1000,-0.033,1.1e-07,-0.03,0.29,1.65,12800.0,62.0,1.7,0,0,0.0,False Neg; LASSO sqrt(2)
+11,4,Stanford Heart Tx,Crowley1977,103,Cox,Transplant x Accept_Yr,1065.4,2500000.0,1.0,-1317/1000,-1.317,3.8e-06,98.42,0.24,412.5,31500000.0,86.7,2.2,1,1,0.0,Sign Flip; False Neg; R Drop
+12,4,German Breast GBSG,Sauerbrei1999,686,Cox,Tamoxifen x Age,5.2,29.0,1.0,-91/250,-0.364,0.00021,0.39,0.44,3.41,28400.0,71.4,2.5,1,0,0.0,Sign Flip; False Neg; LASSO sqrt(2)
+13,4,Colon Cancer 5-FU,Moertel1990,619,Cox,Lev_5FU x Age,5.0,36.0,1.0,-64/125,-0.512,8.4e-07,0.18,0.71,2.91,31000.0,69.3,2.0,1,0,0.0,Sign Flip; False Neg; LASSO sqrt(2)
+18,4,ACTG 175 HIV,Hammer1996,2139,Cox,Combo_ART x Karnofsky,16.2,260.0,1.0,-137/200,-0.685,1e-16,0.82,0.26,9.85,94000.0,77.8,1.9,1,1,0.0,Sign Flip; False Neg; LASSO sqrt(2)
+19,4,Mayo MGUS2,Kyle2002,1384,Cox,M_Spike x Hemoglobin,6.8,68.0,1.0,123/500,0.246,1.5e-06,-0.23,0.45,6.01,46000.0,66.1,2.7,1,0,0.0,Sign Flip; False Neg; LASSO sqrt(2)
+20,4,Mayo FLC Assay,Dispenzieri2012,7874,Cox,FLC_Sum x Sample_Yr,1296.4,1700000.0,1.0,69/500,0.138,1e-16,-16.23,0.31,566.1,48500000.0,89.6,1.4,1,0,0.0,Sign Flip; False Neg; R Drop
+21,4,Rotterdam Breast,Royston2013,2982,Cox,Chemo x Surg_Year,636.9,410000.0,1.0,-159/500,-0.318,3.2e-06,36.44,0.19,563.5,19200000.0,85.2,2.1,1,1,0.0,Sign Flip; False Neg; R Drop
+22,4,Retinopathy Laser,DRS1976,394,Cox,Laser_Tx x Risk_Score,6.6,44.0,1.0,-98/125,-0.784,1.4e-09,0.6,0.32,4.11,36000.0,74.8,3.3,1,0,0.0,Sign Flip; False Neg; LASSO sqrt(2)

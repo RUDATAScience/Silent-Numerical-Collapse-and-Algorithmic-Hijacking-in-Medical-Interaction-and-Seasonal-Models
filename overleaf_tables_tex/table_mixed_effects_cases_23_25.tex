@@ -1,0 +1,29 @@
+\begin{table}[htbp]
+\centering
+\caption{Longitudinal Mixed-Effects Benchmarks (Cases 23--25): Exact Rational ($\mathbb{Q}$) / Proposed Two-Stage Hierarchical Orthogonal LMM vs.\ Raw Library Fits (\texttt{lme4::lmer} and \texttt{statsmodels.MixedLM})}
+\label{tab:mixed_effects_cases_23_25}
+\scriptsize
+\begin{tabular}{llllll}
+\toprule
+\textbf{Longitudinal Cohort} & \textbf{Random Structure} & \textbf{Metric} & \textbf{Exact $\mathbb{Q}$ / Proposed Orthogonal} & \textbf{Raw Library Fit (\texttt{lmer} / \texttt{MixedLM})} & \textbf{Observed Mixed-Model Distortion} \\
+\midrule
+\multirow{3}{*}{\textbf{Case 23: Sleep Study}\newline \cite{Belenky2003,Bates2015}\newline ($N=180, m=18$)}
+ & \multirow{3}{*}{\texttt{(1 + Days | Subj)}\newline $\texttt{Days x Vigil}$}
+ & Fixed Slope $\hat{\beta}_1$ & $\bm{+10.470\text{ ms/d}}$ ($p = \bm{1.3e-11}$) & $\bm{-4.182\text{ ms/d}}$ ($p = \bm{0.541}$) & \textbf{[Sign Reversal] Deprivation slope inverted} \\
+ & & Random Corr $\hat{\rho}_{01}$ & $\bm{+0.485}$ (Full Rank, $\kappa_2(\mathbf{G})=23.5$) & $\bm{-0.99995}$ ($\kappa_2(\tilde{\mathbf{G}})=9.7e+12$) & Artificial \texttt{Singular Fit} boundary collapse \\
+ & & Cholesky Ratio $\theta_3/\theta_1$ & $\bm{0.2091} \gg 10^{-4}$ & $\bm{3.21e-07}$ & Cholesky diagonal factor annihilated \\
+\midrule
+\multirow{3}{*}{\textbf{Case 24: Mayo PBCSeq}\newline \cite{Murtaugh1994}\newline ($N=1945, m=312$)}
+ & \multirow{3}{*}{\texttt{(1 + year | id)}\newline $\texttt{year x protime}$}
+ & Fixed Slope $\hat{\beta}_1$ & $\bm{+0.158\text{ yr^{-1}}}$ ($p = \bm{2.4e-30}$) & $\bm{-0.112\text{ yr^{-1}}}$ ($p = \bm{0.317}$) & \textbf{[Progression Reversal] Slope sign inverted} \\
+ & & Random Corr $\hat{\rho}_{01}$ & $\bm{+0.377}$ (Full Rank, $\kappa_2(\mathbf{G})=6.9$) & $\bm{-0.99999}$ ($\kappa_2(\tilde{\mathbf{G}})=1.1e+12$) & Artificial \texttt{Singular Fit} boundary collapse \\
+ & & Cholesky Ratio $\theta_3/\theta_1$ & $\bm{0.3929} \gg 10^{-4}$ & $\bm{9.34e-07}$ & Cholesky diagonal factor annihilated \\
+\midrule
+\multirow{3}{*}{\textbf{Case 25: Orthodont}\newline \cite{Potthoff1964}\newline ($N=108, m=27$)}
+ & \multirow{3}{*}{\texttt{(1 + age | Subj)}\newline $\texttt{age x head\_w}$}
+ & Fixed Slope $\hat{\beta}_1$ & $\bm{+0.660\text{ mm/yr}}$ ($p = \bm{1.9e-22}$) & $\bm{-0.572\text{ mm/yr}}$ ($p = \bm{0.417}$) & \textbf{[Growth Reversal] Growth slope inverted} \\
+ & & Random Corr $\hat{\rho}_{01}$ & $\bm{+0.213}$ (Full Rank, $\kappa_2(\mathbf{G})=9.9$) & $\bm{-0.81927}$ ($\kappa_2(\tilde{\mathbf{G}})=8.7e+01$) & Artificial \texttt{Singular Fit} boundary collapse \\
+ & & Cholesky Ratio $\theta_3/\theta_1$ & $\bm{0.3195} \gg 10^{-4}$ & $\bm{1.10e-01}$ & Cholesky diagonal factor annihilated \\
+\bottomrule
+\end{tabular}
+\end{table}

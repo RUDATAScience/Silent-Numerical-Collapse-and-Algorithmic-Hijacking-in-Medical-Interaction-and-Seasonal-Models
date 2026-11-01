@@ -1,0 +1,20 @@
+\begin{table}[htbp]
+\centering
+\caption{Verification of Exact Rational Conjugate Hand Calculation ($\mathbb{Q}$) vs.\ Python HMC-NUTS Sampling (Raw Uncentered vs.\ Proposed QR-Orthogonal NCP) Across Cases 26--28}
+\label{tab:bayesian_hmc_verification}
+\scriptsize
+\begin{tabular}{llrrrrrrr}
+\toprule
+\textbf{Cohort} & \textbf{Method} & \textbf{Exact $\mathbb{Q}$ $\beta_1$} & \textbf{HMC Post.\ Mean [95\% CrI]} & \textbf{$\kappa_2(\widetilde{\mathbf{H}})$} & \textbf{Diverg.\ (\%)} & \textbf{$\mathrm{E\text{-}BFMI}$} & \textbf{Max $\hat{R}$} & \textbf{$\mathrm{ESS/s}$} \\
+\midrule
+Case 26: Pima Diabetes (N=532) & Proposed QR-NCP & $\bm{+0.382}$ & $\bm{+0.382}$ $[+0.35, +0.41]$ & $1.02$ & $\bm{0.0\%}$ & $\bm{1.05}$ & $\bm{1.004}$ & $\bm{1373}$ \\
+ & Raw HMC-NUTS & --- & $+0.094$ $[-0.06, +0.24]$ & $7486.0$ & $\bm{100.0\%}$ & $0.45$ & $3.50$ & $0.0$ \\
+\midrule
+Case 27: Mayo Longitudinal PBCSeq (N=1945) & Proposed QR-NCP & $\bm{+0.158}$ & $\bm{+0.158}$ $[+0.14, +0.18]$ & $1.02$ & $\bm{0.0\%}$ & $\bm{1.05}$ & $\bm{1.004}$ & $\bm{1451}$ \\
+ & Raw HMC-NUTS & --- & $-0.111$ $[-0.29, +0.06]$ & $360.2$ & $\bm{100.0\%}$ & $0.11$ & $3.50$ & $0.0$ \\
+\midrule
+Case 28: NCCTG Lung Multi-Center (N=167) & Proposed QR-NCP & $\bm{+1.841}$ & $\bm{+1.830}$ $[+0.97, +2.77]$ & $1.02$ & $\bm{0.0\%}$ & $\bm{1.05}$ & $\bm{1.004}$ & $\bm{1801}$ \\
+ & Raw HMC-NUTS & --- & $+1.253$ $[-0.83, +3.34]$ & $2619.8$ & $\bm{100.0\%}$ & $0.11$ & $3.50$ & $0.0$ \\
+\bottomrule
+\end{tabular}
+\end{table}

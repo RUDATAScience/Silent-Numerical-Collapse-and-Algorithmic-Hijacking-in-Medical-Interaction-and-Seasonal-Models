@@ -1,0 +1,29 @@
+case_id,paradigm_group,cohort_name,n_obs,exact_q_fraction_py,exact_q_fraction_awk,q_fraction_exact_match,exact_q_beta1_decimal,py_beta1_proposed,awk_beta1_proposed,abs_diff_py_vs_awk_proposed,rel_diff_py_vs_awk_proposed,py_beta1_raw,awk_beta1_raw,abs_diff_py_vs_awk_raw,py_diag_metric_raw,awk_diag_metric_raw,py_diag_metric_prop,awk_diag_metric_prop,diag_metric_name,secondary_raw_pct,secondary_prop_pct,sign_flip_in_raw
+1,Domain 1 (OLS),Diabetes,442,28/25,28/25,1,1.12,1.12,1.12,0.0,0.0,-0.52,-0.52,0.0,55.0,55.0,1.0,1.0,Max_Structural_VIF,58.4,2.1,1
+2,Domain 3 (OLS),UK Lung Deaths,72,4026/5,4026/5,1,805.2,805.2,805.2,0.0,0.0,57148.5,57148.5,0.0,1300000.0,1300000.0,1.0,1.0,Max_Structural_VIF,88.1,1.5,0
+3,Domain 1 (OLS),Mayo Clinic PBC,312,-141/1000,-141/1000,1,-0.141,-0.141,-0.141,0.0,0.0,0.11,0.11,0.0,120.0,120.0,1.0,1.0,Max_Structural_VIF,63.8,3.4,1
+4,Domain 1 (OLS),Low Birth Weight,189,-1419/5,-1419/5,1,-283.8,-283.8,-283.8,0.0,0.0,-305.9,-305.9,0.0,30.0,30.0,1.0,1.0,Max_Structural_VIF,49.2,1.9,0
+5,Domain 2 (Logistic),Heart Failure,299,343/500,343/500,1,0.686,0.686,0.686,0.0,0.0,-4.82,-4.82,0.0,960.0,960.0,1.0,1.0,Max_Structural_VIF,68.2,3.1,1
+6,Domain 2 (Logistic),Framingham CHD,3658,13/200,13/200,1,0.065,0.065,0.065,0.0,0.0,0.2,0.2,0.0,67.0,67.0,1.0,1.0,Max_Structural_VIF,54.7,2.4,0
+7,Domain 2 (Logistic),Breast Cancer WDBC,569,114/125,114/125,1,0.912,0.912,0.912,0.0,0.0,0.34,0.34,0.0,83.0,83.0,1.0,1.0,Max_Structural_VIF,61.5,4.2,0
+8,Domain 3 (OLS),Chicago NMMAPS,5114,41/50,41/50,1,0.82,0.82,0.82,0.0,0.0,-13.02,-13.02,0.0,700.0,700.0,1.0,1.0,Max_Structural_VIF,76.4,3.8,1
+9,Domain 4 (Cox),Veteran Lung CA,137,-33/1000,-33/1000,1,-0.033,-0.033,-0.033,0.0,0.0,-0.03,-0.03,0.0,42.0,42.0,1.0,1.0,Max_Structural_VIF,62.0,1.7,0
+10,Domain 2 (Logistic),Pima Diabetes,532,19/500,19/500,1,0.038,0.038,0.038,0.0,0.0,0.01,0.01,0.0,52.0,52.0,1.0,1.0,Max_Structural_VIF,64.5,1.8,0
+11,Domain 4 (Cox),Stanford Heart Tx,103,-1317/1000,-1317/1000,1,-1.317,-1.317,-1.317,0.0,0.0,98.42,98.42,0.0,2500000.0,2500000.0,1.0,1.0,Max_Structural_VIF,86.7,2.2,1
+12,Domain 4 (Cox),German Breast GBSG,686,-91/250,-91/250,1,-0.364,-0.364,-0.364,0.0,0.0,0.39,0.39,0.0,29.0,29.0,1.0,1.0,Max_Structural_VIF,71.4,2.5,1
+13,Domain 4 (Cox),Colon Cancer 5-FU,619,-64/125,-64/125,1,-0.512,-0.512,-0.512,0.0,0.0,0.18,0.18,0.0,36.0,36.0,1.0,1.0,Max_Structural_VIF,69.3,2.0,1
+14,Domain 2 (Logistic),Danish Melanoma,205,171/500,171/500,1,0.342,0.342,0.342,0.0,0.0,42.7,42.7,0.0,580000.0,580000.0,1.0,1.0,Max_Structural_VIF,84.3,2.6,0
+15,Domain 1 (OLS),Siri Body Fat,252,-248/125,-248/125,1,-1.984,-1.984,-1.984,0.0,0.0,2.32,2.32,0.0,460.0,460.0,1.0,1.0,Max_Structural_VIF,72.1,2.8,1
+16,Domain 3 (OLS),NCCTG Lung Energetics,167,921/500,921/500,1,1.842,1.842,1.842,0.0,0.0,0.66,0.66,0.0,19.0,19.0,1.0,1.0,Max_Structural_VIF,55.9,2.9,0
+17,Domain 2 (Logistic),WCGS Coronary,3154,359/500,359/500,1,0.718,0.718,0.718,0.0,0.0,-0.82,-0.82,0.0,55.0,55.0,1.0,1.0,Max_Structural_VIF,59.8,3.0,1
+18,Domain 4 (Cox),ACTG 175 HIV,2139,-137/200,-137/200,1,-0.685,-0.685,-0.685,0.0,0.0,0.82,0.82,0.0,260.0,260.0,1.0,1.0,Max_Structural_VIF,77.8,1.9,1
+19,Domain 4 (Cox),Mayo MGUS2,1384,123/500,123/500,1,0.246,0.246,0.246,0.0,0.0,-0.23,-0.23,0.0,68.0,68.0,1.0,1.0,Max_Structural_VIF,66.1,2.7,1
+20,Domain 4 (Cox),Mayo FLC Assay,7874,69/500,69/500,1,0.138,0.138,0.138,0.0,0.0,-16.23,-16.23,0.0,1700000.0,1700000.0,1.0,1.0,Max_Structural_VIF,89.6,1.4,1
+21,Domain 4 (Cox),Rotterdam Breast,2982,-159/500,-159/500,1,-0.318,-0.318,-0.318,0.0,0.0,36.44,36.44,0.0,410000.0,410000.0,1.0,1.0,Max_Structural_VIF,85.2,2.1,1
+22,Domain 4 (Cox),Retinopathy Laser,394,-98/125,-98/125,1,-0.784,-0.784,-0.784,0.0,0.0,0.6,0.6,0.0,44.0,44.0,1.0,1.0,Max_Structural_VIF,74.8,3.3,1
+23,Longitudinal LMM (REML),Sleep Study,180,1047/100,1047/100,1,10.47,10.47,10.47,0.0,0.0,-4.182,-4.182,0.0,3.211980873899491e-07,3.212e-07,0.2091184105549942,0.209118,Cholesky_Ratio_theta3_theta1,-99.9949260829555,48.51193698337161,1
+24,Longitudinal LMM (REML),Mayo PBCSeq,1945,79/500,79/500,1,0.158,0.158,0.158,0.0,0.0,-0.112,-0.112,0.0,9.340513455316238e-07,9.3405e-07,0.39293765408777,0.392938,Cholesky_Ratio_theta3_theta1,-99.99938829155488,37.71236166328253,1
+25,Longitudinal LMM (REML),Orthodont,108,33/50,33/50,1,0.66,0.66,0.66,0.0,0.0,-0.572,-0.572,0.0,0.1100738033420172,0.11007,0.3195453774384682,0.319545,Cholesky_Ratio_theta3_theta1,-81.92701249991889,21.33084751273912,1
+26,Bayesian HMC-NUTS (QR-NCP),Pima Diabetes,532,38189/100000,38189/100000,1,0.38189,0.38154,0.38154,0.0,0.0,0.09428,0.09428,0.0,7486.0,7486.0,1.02,1.02,Precond_Hessian_Cond_kappa2,100.0,0.0,0
+27,Bayesian HMC-NUTS (QR-NCP),Mayo Longitudinal PBCSeq,1945,15799/100000,15799/100000,1,0.15799,0.15776,0.15776,0.0,0.0,-0.11149,-0.11149,0.0,360.2,360.2,1.02,1.02,Precond_Hessian_Cond_kappa2,100.0,0.0,1
+28,Bayesian HMC-NUTS (QR-NCP),NCCTG Lung Multi-Center,167,184073/100000,184073/100000,1,1.84073,1.82954,1.82954,0.0,0.0,1.25269,1.25269,0.0,2619.8,2619.8,1.02,1.02,Precond_Hessian_Cond_kappa2,100.0,0.0,0
