@@ -14,10 +14,10 @@
 <a id="part-i-english-version"></a>
 # Part I: English Version
 
-**Author:** **Yasuko Kawahata**  
-Associate Professor, College of Sociology / Graduate School of Sociology, Rikkyo University  
-Researcher, University Hospital Medical Information Network (**UMIN**, Japan)  
-**Corresponding Author & Ethics/Audit Contact (UMIN):** [`kawahata-hc@umin.ac.jp`](mailto:kawahata-hc@umin.ac.jp)  
+**Author:** **Yasuko Kawahata (川畑 泰子)**  
+Associate Professor, College of Sociology / Graduate School of Sociology, Rikkyo University (立教大学 社会学部 / 大学院社会学研究科)  
+IEEE Senior Member
+**Corresponding Author Contact (UMIN):** [`kawahata-hc@umin.ac.jp`](mailto:kawahata-hc@umin.ac.jp)
 **Repository URL:** <https://github.com/RUDATAScience/Silent-Numerical-Collapse-and-Algorithmic-Hijacking-in-Medical-Interaction-and-Seasonal-Models>
 
 ---
